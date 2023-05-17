@@ -12,7 +12,6 @@ def classify(PATH):
 
     transform = transforms.ToTensor()
     tensor = transform(image)
-    tensor = tensor  # .cuda()
     tensor = tensor.unsqueeze(dim=0)
 
     with torch.no_grad():
